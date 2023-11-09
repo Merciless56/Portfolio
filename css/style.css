@@ -1,0 +1,196 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-style: 100%;
+  line-height: 1;
+  font-style: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+/* input::-ms-clear{display:none;} */
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-style: inherit;
+  font-weight: 400;
+}
+
+body {
+  background-color: #282C33;
+  color: #ffffff;
+  font-family: "FiraCode";
+  font-size: 16px;
+  font-weight: 400;
+}
+body .hashtag {
+  color: #C778DD;
+  margin-right: 1px;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.header .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 0px 10px;
+  background-color: rgb(41, 41, 41);
+}
+.header .container .menu_list {
+  gap: 30px;
+}
+.header .container .menu_list > li {
+  position: relative;
+  margin: 0px 0px 0px 20px;
+}
+.header .container .menu_list .nav_link {
+  color: #ABB2BF;
+}
+.header .container .menu_list .nav_link:hover {
+  text-decoration: underline;
+}
+.header .container .menu_list .nav_lang {
+  font-weight: 600;
+}
+.header .container .menu_list .dropdown_list_lang {
+  position: absolute;
+  background-color: black;
+  top: 100%;
+  right: 0px;
+  padding: 15px;
+  font-weight: 600;
+}
+.header .container .menu_list .dropdown_list_lang li {
+  margin: 0px 0px 20px 0px;
+}
+.header .container .menu_list .dropdown_list_lang li:last-child {
+  margin: 0px;
+}
+.header .container .menu_list .dropdown_list_lang li .lang {
+  color: #ABB2BF;
+}
+.header .container .menu_list .dropdown_list_lang li .lang:hover {
+  text-decoration: underline;
+}
+
+.br {
+  padding-top: 70px;
+}
+
+.menu_list > li:hover .dropdown_list_lang {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0px, 0px);
+  pointer-events: all;
+}
+
+.arrow {
+  display: none;
+}
+
+.menu_list > li {
+  align-items: center;
+}
+
+.arrow {
+  display: inline-block;
+  transition: 300ms ease 0s;
+  margin: 0px 0px 0px 5px;
+}
+
+.nav_link {
+  flex: 1 1 auto;
+}
+
+.menu_list ._active .dropdown_list_lang {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0px, 0px);
+  pointer-events: all;
+}
+
+.menu_list ._active .arrow {
+  transform: rotate(180deg);
+}
+
+@media (min-width: 540px) {
+  .menu_list {
+    display: flex;
+    padding: 40px 10px 0px 10px;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .menu_list .dropdown_list_lang {
+    transform: translate(0px, 10%);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+@font-face {
+  font-family: "FiraCode";
+  src: url("../fonts/FiraCode-VariableFont_wght.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+/*# sourceMappingURL=style.css.map */
