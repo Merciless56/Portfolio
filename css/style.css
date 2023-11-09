@@ -69,55 +69,79 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-  background-color: #282C33;
+  background-color: #282c33;
   color: #ffffff;
   font-family: "FiraCode";
   font-size: 16px;
   font-weight: 400;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 body .hashtag {
-  color: #C778DD;
+  color: #c778dd;
   margin-right: 1px;
 }
 
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
 .header {
-  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
 }
 .header .container {
-  max-width: 1400px;
-  margin: 0 auto;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  padding: 0px 10px;
-  background-color: rgb(41, 41, 41);
 }
 .header .container .menu_list {
-  gap: 30px;
-}
-.header .container .menu_list > li {
-  position: relative;
-  margin: 0px 0px 0px 20px;
+  gap: 32px;
+  display: flex;
+  padding: 40px 10px 0px 10px;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 .header .container .menu_list .nav_link {
-  color: #ABB2BF;
+  color: #abb2bf;
 }
-.header .container .menu_list .nav_link:hover {
-  text-decoration: underline;
+.header .container .menu_list .btn_lang {
+  position: relative;
+  cursor: pointer;
+  width: 40px;
+}
+.header .container .menu_list .btn_lang.active .dropdown_list_lang {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0px, 0px);
+  pointer-events: all;
+}
+.header .container .menu_list .btn_lang.active .arrow {
+  transform: rotate(180deg);
+}
+.header .container .menu_list .btn_lang .arrow {
+  display: inline-block;
+  transition: 300ms ease 0s;
 }
 .header .container .menu_list .nav_lang {
   font-weight: 600;
 }
 .header .container .menu_list .dropdown_list_lang {
   position: absolute;
-  background-color: black;
-  top: 100%;
+  background-color: #282c33;
+  border: 1px solid #abb2bf;
   right: 0px;
   padding: 15px;
   font-weight: 600;
+  margin-top: 5px;
+  opacity: 50%;
+  visibility: hidden;
+  pointer-events: none;
+  cursor: default;
 }
 .header .container .menu_list .dropdown_list_lang li {
   margin: 0px 0px 20px 0px;
@@ -126,66 +150,42 @@ body .hashtag {
   margin: 0px;
 }
 .header .container .menu_list .dropdown_list_lang li .lang {
-  color: #ABB2BF;
-}
-.header .container .menu_list .dropdown_list_lang li .lang:hover {
-  text-decoration: underline;
+  color: #abb2bf;
 }
 
-.br {
-  padding-top: 70px;
+.footer .content {
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
 }
-
-.menu_list > li:hover .dropdown_list_lang {
-  opacity: 1;
-  visibility: visible;
-  transform: translate(0px, 0px);
-  pointer-events: all;
+.footer .left_content,
+.footer .right_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-
-.arrow {
-  display: none;
+.footer .left_content .up,
+.footer .right_content .up {
+  display: flex;
 }
-
-.menu_list > li {
-  align-items: center;
-}
-
-.arrow {
+.footer .left_content .up .logo,
+.footer .right_content .up .logo {
   display: inline-block;
-  transition: 300ms ease 0s;
-  margin: 0px 0px 0px 5px;
+}
+.footer .left_content .up .mail,
+.footer .right_content .up .mail {
+  padding-left: 24px;
+}
+.footer .left_content .up .media,
+.footer .right_content .up .media {
+  color: #ffffff;
+  font-family: "FiraCode";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 
-.nav_link {
-  flex: 1 1 auto;
-}
-
-.menu_list ._active .dropdown_list_lang {
-  opacity: 1;
-  visibility: visible;
-  transform: translate(0px, 0px);
-  pointer-events: all;
-}
-
-.menu_list ._active .arrow {
-  transform: rotate(180deg);
-}
-
-@media (min-width: 540px) {
-  .menu_list {
-    display: flex;
-    padding: 40px 10px 0px 10px;
-    justify-content: space-between;
-    align-items: flex-end;
-  }
-  .menu_list .dropdown_list_lang {
-    transform: translate(0px, 10%);
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-  }
-}
 @font-face {
   font-family: "FiraCode";
   src: url("../fonts/FiraCode-VariableFont_wght.ttf") format("truetype");

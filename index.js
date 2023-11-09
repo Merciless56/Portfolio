@@ -20,3 +20,7 @@ if (menulinks.length > 0) {
     }
 }
 
+let btn = document.querySelector('.btn_lang');
+btn.onclick = function () {
+    btn.classList.toggle('active');
+}
