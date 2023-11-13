@@ -89,28 +89,11 @@ body .text {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 25px;
+  line-height: 25px; /* 156.25% */
 }
 body .button {
   padding: 8px 16px;
   border: 1px solid #c778dd;
-}
-body .title {
-  font-size: 32px;
-  font-weight: 500;
-  display: flex;
-  justify-content: space-between;
-}
-body .title .heading {
-  display: flex;
-  align-items: center;
-}
-body .title .heading .line {
-  display: inline-block;
-  width: 200px;
-  height: 1px;
-  background-color: #c778dd;
-  margin-left: 16px;
 }
 
 .back_icons {
@@ -126,7 +109,7 @@ body .title .heading .line {
 .container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 50px 20px;
+  padding: 120px 20px;
 }
 
 .header {
@@ -135,7 +118,6 @@ body .title .heading .line {
   width: 100%;
 }
 .header .container {
-  padding-top: 20px;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -204,7 +186,7 @@ body .title .heading .line {
   justify-content: space-evenly;
   align-items: flex-start;
 }
-.main_content .first .content .left_content .caption {
+.main_content .first .content .left_content .title {
   color: var(#ffffff, #fff);
   font-family: "FiraCode";
   font-size: 32px;
@@ -212,16 +194,16 @@ body .title .heading .line {
   font-weight: 600;
   line-height: normal;
 }
-.main_content .first .content .left_content .caption .name {
+.main_content .first .content .left_content .title .name {
   font-weight: 700;
   font-size: 50px;
   letter-spacing: 2px;
   padding-bottom: 10px;
 }
-.main_content .first .content .left_content .caption .violet {
+.main_content .first .content .left_content .title .violet {
   color: #c778dd;
 }
-.main_content .first .content .left_content .caption :nth-child(1) {
+.main_content .first .content .left_content .title :nth-child(1) {
   padding-left: 50px;
 }
 .main_content .first .content .right_content {
@@ -302,170 +284,7 @@ body .title .heading .line {
   border: 1px solid #abb2bf;
   margin-left: 50px;
 }
-.main_content .projects .cards {
-  display: flex;
-  gap: 16px;
-  justify-content: space-between;
-  padding-top: 48px;
-}
-.main_content .projects .cards .card {
-  flex: 0 0 200px;
-  border: 1px solid #abb2bf;
-  align-self: flex-start;
-}
-.main_content .projects .cards .card .banner {
-  border-bottom: 1px solid #abb2bf;
-}
-.main_content .projects .cards .card .tools {
-  display: flex;
-  padding: 8px;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 8px;
-  color: #abb2bf;
-  border-bottom: 1px solid #abb2bf;
-}
-.main_content .projects .cards .card .information {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 16px;
-  padding: 16px;
-}
-.main_content .projects .cards .card .information .name {
-  font-size: 24px;
-  font-weight: 500;
-}
-.main_content .projects .cards .card .information .caption {
-  color: #abb2bf;
-}
-.main_content .skills .content {
-  display: flex;
-  justify-content: space-between;
-  min-height: 180px;
-}
-.main_content .skills .content .image {
-  min-width: 400px;
-  position: relative;
-}
-.main_content .skills .content .image :nth-child(1) {
-  position: absolute;
-  top: 205px;
-  left: 330px;
-}
-.main_content .skills .content .image :nth-child(2) {
-  position: absolute;
-  top: 32px;
-  left: 260px;
-}
-.main_content .skills .content .image :nth-child(3) {
-  position: absolute;
-  width: 63px;
-  height: 63px;
-  top: 50px;
-  left: 12px;
-}
-.main_content .skills .content .image :nth-child(4) {
-  width: 63px;
-  height: 63px;
-  position: absolute;
-  top: 155px;
-  left: 209px;
-}
-.main_content .skills .content .image :nth-child(5) {
-  width: 140px;
-  height: 80px;
-  position: absolute;
-  top: 181px;
-  left: 37px;
-}
-.main_content .skills .content .skill_list {
-  display: flex;
-  flex-direction: row-reverse;
-  gap: 16px;
-}
-.main_content .skills .content .skill_list .column {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  align-self: flex-start;
-  justify-content: space-between;
-}
-.main_content .skills .content .skill_list .column .skill {
-  border: 1px solid #abb2bf;
-}
-.main_content .skills .content .skill_list .column .skill .category {
-  padding: 8px;
-  font-weight: 600;
-  border-bottom: 1px solid #abb2bf;
-}
-.main_content .skills .content .skill_list .column .skill .caption {
-  padding: 0px 8px;
-  color: #abb2bf;
-}
-.main_content .about_me .content {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 48px;
-}
-.main_content .about_me .content .left_content {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-.main_content .about_me .content .left_content .text {
-  margin-top: 28px;
-  padding-bottom: 27px;
-}
-.main_content .about_me .content .right_content .image {
-  position: relative;
-}
-.main_content .about_me .content .right_content .image :nth-child(1) {
-  border-bottom: 1px solid #c778dd;
-}
-.main_content .about_me .content .right_content .image :nth-child(2) {
-  position: absolute;
-  top: 59px;
-  left: -4px;
-}
-.main_content .about_me .content .right_content .image :nth-child(3) {
-  position: absolute;
-  top: 279px;
-  left: 219px;
-}
-.main_content .contacts .content {
-  display: flex;
-  justify-content: space-between;
-}
-.main_content .contacts .content .text {
-  margin-top: 28px;
-  width: 500px;
-}
-.main_content .contacts .content .message {
-  display: flex;
-  flex-direction: column;
-  align-self: flex-start;
-  padding: 16px;
-  gap: 16px;
-  border: 1px solid #abb2bf;
-}
-.main_content .contacts .content .message .list {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 8px;
-}
-.main_content .contacts .content .message .list div {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  font-weight: 600;
-}
 
-.footer {
-  border-top: 1px solid #abb2bf;
-}
 .footer .content {
   height: 75px;
   display: flex;
@@ -507,4 +326,4 @@ body .title .heading .line {
   font-weight: normal;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=.css.map */

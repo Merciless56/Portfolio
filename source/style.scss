@@ -3,6 +3,7 @@
 $gray: #abb2bf;
 $white: #ffffff;
 $black-gray: #282c33;
+$violet: #c778dd;
 
 $scres_1: 540px;
 
@@ -12,19 +13,58 @@ body {
   font-family: "FiraCode";
   font-size: 16px;
   font-weight: 400;
+  font-style: normal;
+  line-height: normal;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   .hashtag {
-    color: #c778dd;
+    color: $violet;
     margin-right: 1px;
   }
-}
+  .text {
+    color: $gray;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+  }
+  .button {
+    padding: 8px 16px;
+    border: 1px solid $violet;
+  }
+  .title {
+    font-size: 32px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    .heading {
+      display: flex;
+      align-items: center;
 
+      .line {
+        display: inline-block;
+        width: 200px;
+        height: 1px;
+        background-color: $violet;
+        margin-left: 16px;
+      }
+    }
+  }
+}
+.back_icons {
+  position: absolute;
+  .logo_line {
+    width: 140px;
+    height: 80px;
+    top: 207px;
+    left: 726px;
+  }
+}
 .container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 50px 20px;
 }
 
 .header {
@@ -32,6 +72,7 @@ body {
   left: 0;
   width: 100%;
   .container {
+    padding-top: 20px;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
@@ -100,7 +141,302 @@ body {
   }
 }
 
+.main_content {
+  .first {
+    .content {
+      display: flex;
+      justify-content: space-between;
+      .left_content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        .caption {
+          color: var($white, #fff);
+          font-family: "FiraCode";
+          font-size: 32px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+          .name {
+            font-weight: 700;
+            font-size: 50px;
+            letter-spacing: 2px;
+            padding-bottom: 10px;
+          }
+          .violet {
+            color: $violet;
+          }
+          :nth-child(1) {
+            padding-left: 50px;
+          }
+        }
+      }
+      .right_content {
+        padding-left: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .image {
+          position: relative;
+
+          .logo_line {
+            position: absolute;
+            width: 175px;
+            height: 100px;
+            top: 90px;
+            left: -15px;
+            z-index: -1;
+          }
+          .dots {
+            position: absolute;
+            top: 246px;
+            left: 357px;
+            z-index: 1;
+          }
+        }
+        .status {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          padding: 8px;
+          border: 1px solid $gray;
+          color: $gray;
+          font-weight: 500;
+          .white {
+            font-weight: 600;
+            color: $white;
+          }
+          .indicator {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background-color: $violet;
+          }
+        }
+      }
+    }
+  }
+  .quote {
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      max-width: 50%;
+      margin: 0 auto;
+      .text {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding: 32px;
+        border: 1px solid $gray;
+        color: $white;
+
+        font-size: 24px;
+        font-weight: 500;
+
+        .downMark {
+          padding: 4px 8px;
+          position: absolute;
+          bottom: -15px;
+          right: 19px;
+          background-color: $black-gray;
+        }
+        .upMark {
+          padding: 4px 8px;
+          position: absolute;
+          top: -15px;
+          left: 19px;
+          background-color: $black-gray;
+        }
+      }
+    }
+    .author {
+      padding: 16px;
+      border: 1px solid $gray;
+      margin-left: 50px;
+    }
+  }
+  .projects {
+    .cards {
+      display: flex;
+      gap: 16px;
+      justify-content: space-between;
+      padding-top: 48px;
+      .card {
+        flex: 0 0 200px;
+        border: 1px solid $gray;
+        align-self: flex-start;
+        .banner {
+          border-bottom: 1px solid $gray;
+        }
+        .tools {
+          display: flex;
+          padding: 8px;
+          align-items: flex-start;
+          flex-wrap: wrap;
+          gap: 8px;
+          color: $gray;
+          border-bottom: 1px solid $gray;
+        }
+        .information {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 16px;
+          padding: 16px;
+          .name {
+            font-size: 24px;
+            font-weight: 500;
+          }
+          .caption {
+            color: $gray;
+          }
+        }
+      }
+    }
+  }
+  .skills {
+    .content {
+      display: flex;
+      justify-content: space-between;
+      min-height: 180px;
+      .image {
+        min-width: 400px;
+        position: relative;
+
+        :nth-child(1) {
+          position: absolute;
+          top: 205px;
+          left: 330px;
+        }
+        :nth-child(2) {
+          position: absolute;
+          top: 32px;
+          left: 260px;
+        }
+        :nth-child(3) {
+          position: absolute;
+          width: 63px;
+          height: 63px;
+          top: 50px;
+          left: 12px;
+        }
+        :nth-child(4) {
+          width: 63px;
+          height: 63px;
+          position: absolute;
+          top: 155px;
+          left: 209px;
+        }
+        :nth-child(5) {
+          width: 140px;
+          height: 80px;
+          position: absolute;
+          top: 181px;
+          left: 37px;
+        }
+      }
+      .skill_list {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 16px;
+        .column {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          align-self: flex-start;
+          justify-content: space-between;
+          .skill {
+            border: 1px solid $gray;
+
+            .category {
+              padding: 8px;
+              font-weight: 600;
+              border-bottom: 1px solid $gray;
+            }
+            .caption {
+              padding: 0px 8px;
+              color: $gray;
+            }
+          }
+        }
+      }
+    }
+  }
+  .about_me {
+    .content {
+      display: flex;
+      justify-content: space-between;
+
+      margin-top: 48px;
+      .left_content {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        .text {
+          margin-top: 28px;
+          padding-bottom: 27px;
+        }
+      }
+      .right_content {
+        .image {
+          position: relative;
+          :nth-child(1) {
+            border-bottom: 1px solid $violet;
+          }
+          :nth-child(2) {
+            position: absolute;
+            top: 59px;
+            left: -4px;
+          }
+          :nth-child(3) {
+            position: absolute;
+            top: 279px;
+            left: 219px;
+          }
+        }
+      }
+    }
+  }
+  .contacts {
+    .content {
+      display: flex;
+      justify-content: space-between;
+      .text {
+        margin-top: 28px;
+        width: 500px;
+      }
+      .message {
+        display: flex;
+        flex-direction: column;
+        align-self: flex-start;
+
+        padding: 16px;
+        gap: 16px;
+        border: 1px solid $gray;
+        .list {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 8px;
+
+          div {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+}
+
 .footer {
+  border-top: 1px solid $gray;
   .content {
     height: 75px;
     display: flex;
@@ -118,6 +454,7 @@ body {
       }
       .mail {
         padding-left: 24px;
+        letter-spacing: 2px;
       }
       .media {
         color: $white;
