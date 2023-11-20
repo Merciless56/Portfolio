@@ -24,10 +24,6 @@ body {
   }
   .text {
     color: $gray;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 25px;
   }
   .button {
     padding: 8px 16px;
@@ -53,16 +49,17 @@ body {
   }
 }
 .back_icons {
-  position: absolute;
-  .logo_line {
-    width: 140px;
-    height: 80px;
-    top: 207px;
-    left: 726px;
+  :nth-child(1) {
+    position: fixed;
+    width: 155px;
+    height: 155px;
+    top: 256px;
+    left: calc(100% - 256px);
+    border: 1px solid $gray;
   }
 }
 .container {
-  max-width: 1400px;
+ max-width: 1600px;
   margin: 0 auto;
   padding: 50px 20px;
 }

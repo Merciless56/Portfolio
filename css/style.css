@@ -86,10 +86,6 @@ body .hashtag {
 }
 body .text {
   color: #abb2bf;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 25px;
 }
 body .button {
   padding: 8px 16px;
@@ -113,18 +109,17 @@ body .title .heading .line {
   margin-left: 16px;
 }
 
-.back_icons {
-  position: absolute;
-}
-.back_icons .logo_line {
-  width: 140px;
-  height: 80px;
-  top: 207px;
-  left: 726px;
+.back_icons :nth-child(1) {
+  position: fixed;
+  width: 155px;
+  height: 155px;
+  top: 256px;
+  left: calc(100% - 256px);
+  border: 1px solid #abb2bf;
 }
 
 .container {
-  max-width: 1400px;
+  max-width: 1600px;
   margin: 0 auto;
   padding: 50px 20px;
 }
